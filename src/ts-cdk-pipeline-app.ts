@@ -36,7 +36,7 @@ export class CDKPipelineApp extends awscdk.AwsCdkTypeScriptApp {
     new Environments(this, './src/pipeline/environments.ts');
 
     new Main(this, './src/main.ts', {
-      repo: 'thing/thing',
+      repo: 'thing/thing2',
       branch: 'main',
       codestarArn: 'arn:xxx',
     });

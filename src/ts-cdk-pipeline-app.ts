@@ -42,11 +42,11 @@ export class CDKPipelineApp extends awscdk.AwsCdkTypeScriptApp {
     });
 
     new SampleFile(this, './src/exampleStack/exampleStack.ts', {
-      sourcePath: './templatefiles/exampleStack.template.ts',
+      sourcePath: './src/templatefiles/exampleStack.template.ts',
     });
 
     new SampleFile(this, './src/pipeline/pipeline.ts', {
-      sourcePath: './templatefiles/pipeline.template.ts',
+      sourcePath: './src/templatefiles/pipeline.template.ts',
     });
   }
 }

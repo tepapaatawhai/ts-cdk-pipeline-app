@@ -5,7 +5,7 @@ import { SourceCode, SampleFile, Project } from 'projen';
 /**
  * A TypeScript interface rendered from a jsii interface specification
  */
-export class Environments  {
+export class Environments {
   public constructor(project: Project, filepath: string) {
 
     const environments = [
@@ -21,21 +21,20 @@ export class Environments  {
         env: {
           account: '111111111111',
           region: 'ap-southeast-2',
-        }
-      }
-    ]
-    
+        },
+      },
+    ];
 
-    const sourceFile = new SourceCode(project, './build/environments.ts' )
-    sourceFile.line(`import * as core from 'aws-cdk-lib';`)
+
+    const sourceFile = new SourceCode(project, './build/environments.ts' );
+    sourceFile.line('import * as core from \'aws-cdk-lib\';');
     environments.forEach((environment) => {
-        sourceFile.line(`export const ${environment.name}: core.Environment = ${JSON.stringify(environment.env, undefined, 2)};`);
-        sourceFile.line('');
+      sourceFile.line(`export const ${environment.name}: core.Environment = ${JSON.stringify(environment.env, undefined, 2)};`);
+      sourceFile.line('');
     });
 
-    new SampleFile(project, filepath, { sourcePath: './build/environments.ts'})
+    new SampleFile(project, filepath, { sourcePath: './build/environments.ts' });
 
-    
 
   }
 }

@@ -8,7 +8,7 @@ const project = new cdk.JsiiProject({
   name: 'ts-cdk-pipeline-app',
   projenrcTs: true,
   repositoryUrl: 'https://git.us-west-2.github.source.3p.codecatalyst.aws/v1/DOC/ts-cdk-pipeline-app/ts-cdk-pipeline-app',
-  minNodeVersion: '18.0.0',
+  minNodeVersion: '18.12.0',
   npmAccess: NpmAccess.PUBLIC,
   peerDeps: [
     'projen',

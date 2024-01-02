@@ -94,6 +94,10 @@
       "type": "peer"
     },
     {
+      "name": "jsii",
+      "type": "peer"
+    },
+    {
       "name": "projen",
       "type": "peer"
     }

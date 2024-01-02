@@ -6,12 +6,6 @@ import { Environments } from './generateenvironments';
 import { Main } from './generatemain';
 
 
-export interface GitHubRepo {
-  readonly repo: string;
-  readonly branch: string;
-  readonly codestarArn: string;
-}
-
 export interface CDKPipelineAppOptions extends awscdk.AwsCdkTypeScriptAppOptions {
   /**
    * If set to true, some default values are modified compared to the settings for AwsCdkTypeScriptApp
@@ -21,7 +15,6 @@ export interface CDKPipelineAppOptions extends awscdk.AwsCdkTypeScriptAppOptions
    * @default The default is true.
    */
   readonly closedSource?: boolean;
-  readonly repo: GitHubRepo;
 }
 
 /**
@@ -43,9 +36,9 @@ export class CDKPipelineApp extends awscdk.AwsCdkTypeScriptApp {
     new Environments(this, './src/pipeline/environments.ts');
 
     new Main(this, './src/main.ts', {
-      repo: options.repo.repo,
-      branch: options.repo.branch,
-      codestarArn: options.repo.codestarArn,
+      repo: 'thing/thing',
+      branch: 'main',
+      codestarArn: 'arn:xxx',
     });
 
     new SampleFile(this, './src/exampleStack/exampleStack.ts', {

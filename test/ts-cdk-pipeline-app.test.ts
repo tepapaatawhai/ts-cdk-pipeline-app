@@ -6,11 +6,6 @@ describe('Check settings specific for project type', () => {
       cdkVersion: '2.117.0',
       defaultReleaseBranch: 'main',
       name: 'myproject',
-      repo: {
-        repo: 'blah/blah',
-        branch: 'main',
-        codestarArn: 'arn:xxxx',
-      },
       closedSource: true,
     });
 

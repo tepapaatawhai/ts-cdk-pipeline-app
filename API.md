@@ -1767,7 +1767,6 @@ const cDKPipelineAppOptions: CDKPipelineAppOptions = { ... }
 | <code><a href="#ts-cdk-pipeline-app.CDKPipelineAppOptions.property.lambdaAutoDiscover">lambdaAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `awscdk.LambdaFunction` for each `.lambda.ts` handler in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project. |
 | <code><a href="#ts-cdk-pipeline-app.CDKPipelineAppOptions.property.lambdaExtensionAutoDiscover">lambdaExtensionAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `awscdk.LambdaExtension` for each `.lambda-extension.ts` entrypoint in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project. |
 | <code><a href="#ts-cdk-pipeline-app.CDKPipelineAppOptions.property.lambdaOptions">lambdaOptions</a></code> | <code>projen.awscdk.LambdaFunctionCommonOptions</code> | Common options for all AWS Lambda functions. |
-| <code><a href="#ts-cdk-pipeline-app.CDKPipelineAppOptions.property.repo">repo</a></code> | <code><a href="#ts-cdk-pipeline-app.GitHubRepo">GitHubRepo</a></code> | *No description.* |
 | <code><a href="#ts-cdk-pipeline-app.CDKPipelineAppOptions.property.closedSource">closedSource</a></code> | <code>boolean</code> | If set to true, some default values are modified compared to the settings for AwsCdkTypeScriptApp Specifically, the following default values are changed: - licensed is false by default - githubOptions.mergify is false by default. |
 
 ---
@@ -4102,16 +4101,6 @@ Common options for all AWS Lambda functions.
 
 ---
 
-##### `repo`<sup>Required</sup> <a name="repo" id="ts-cdk-pipeline-app.CDKPipelineAppOptions.property.repo"></a>
-
-```typescript
-public readonly repo: GitHubRepo;
-```
-
-- *Type:* <a href="#ts-cdk-pipeline-app.GitHubRepo">GitHubRepo</a>
-
----
-
 ##### `closedSource`<sup>Optional</sup> <a name="closedSource" id="ts-cdk-pipeline-app.CDKPipelineAppOptions.property.closedSource"></a>
 
 ```typescript
@@ -4122,56 +4111,6 @@ public readonly closedSource: boolean;
 - *Default:* The default is true.
 
 If set to true, some default values are modified compared to the settings for AwsCdkTypeScriptApp Specifically, the following default values are changed: - licensed is false by default - githubOptions.mergify is false by default.
-
----
-
-### GitHubRepo <a name="GitHubRepo" id="ts-cdk-pipeline-app.GitHubRepo"></a>
-
-#### Initializer <a name="Initializer" id="ts-cdk-pipeline-app.GitHubRepo.Initializer"></a>
-
-```typescript
-import { GitHubRepo } from 'ts-cdk-pipeline-app'
-
-const gitHubRepo: GitHubRepo = { ... }
-```
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#ts-cdk-pipeline-app.GitHubRepo.property.branch">branch</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#ts-cdk-pipeline-app.GitHubRepo.property.codestarArn">codestarArn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#ts-cdk-pipeline-app.GitHubRepo.property.repo">repo</a></code> | <code>string</code> | *No description.* |
-
----
-
-##### `branch`<sup>Required</sup> <a name="branch" id="ts-cdk-pipeline-app.GitHubRepo.property.branch"></a>
-
-```typescript
-public readonly branch: string;
-```
-
-- *Type:* string
-
----
-
-##### `codestarArn`<sup>Required</sup> <a name="codestarArn" id="ts-cdk-pipeline-app.GitHubRepo.property.codestarArn"></a>
-
-```typescript
-public readonly codestarArn: string;
-```
-
-- *Type:* string
-
----
-
-##### `repo`<sup>Required</sup> <a name="repo" id="ts-cdk-pipeline-app.GitHubRepo.property.repo"></a>
-
-```typescript
-public readonly repo: string;
-```
-
-- *Type:* string
 
 ---
 

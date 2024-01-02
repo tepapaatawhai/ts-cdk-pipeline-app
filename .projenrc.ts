@@ -13,9 +13,9 @@ const project = new cdk.JsiiProject({
   peerDeps: [
     'projen',
     'constructs',
-    'jsii'
   ],
   // deps: [],                /* Runtime dependencies of this module. */
+  bundledDeps: ['jsii'],
   keywords: [
     'aws',
     'cdk',
@@ -25,7 +25,6 @@ const project = new cdk.JsiiProject({
   description: 'Projen template for creating a CDK project that uses codepipeline and Github for deployment', /* The description is just a string that helps people understand the purpose of the package. */
   devDeps: [
     'projen',
-    'jsii'
   ], /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
 });

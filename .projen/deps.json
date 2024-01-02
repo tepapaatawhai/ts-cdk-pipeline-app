@@ -90,11 +90,11 @@
       "type": "build"
     },
     {
-      "name": "constructs",
-      "type": "peer"
+      "name": "jsii",
+      "type": "bundled"
     },
     {
-      "name": "jsii",
+      "name": "constructs",
       "type": "peer"
     },
     {

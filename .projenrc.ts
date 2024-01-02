@@ -4,7 +4,7 @@ const project = new cdk.JsiiProject({
   authorAddress: 'andrew.frazer@raindancers.cloud',
   authorOrganization: true,
   defaultReleaseBranch: 'main',
-  name: 'projen-pipelines',
+  name: 'ts-cdk-pipeline-apps',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/tepapaatawhai/ts-cdk-pipeline-apps.git',
   licensed: true,

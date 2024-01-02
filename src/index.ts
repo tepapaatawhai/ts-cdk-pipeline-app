@@ -1,1 +1,5 @@
-export * from './ts-cdk-pipeline-app';
+export class Hello {
+  public sayHello() {
+    return 'hello, world!';
+  }
+}

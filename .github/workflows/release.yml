@@ -24,10 +24,6 @@ jobs:
         run: |-
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.12.0
       - name: Install dependencies
         run: yarn install --check-files --frozen-lockfile
       - name: release
@@ -55,7 +51,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v3
         with:
-          node-version: 18.12.0
+          node-version: 18.x
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
@@ -84,7 +80,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v3
         with:
-          node-version: 18.12.0
+          node-version: 18.x
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
